@@ -1,9 +1,13 @@
 import { imperial, petit, serif } from "../fonts";
 import { WeddingCard } from "../components/Cards";
+import Image from "next/image";
+import sidePic from "../ornaments/wayangan.svg";
 
 export default function About() {
 	return (
-		<section className=" bg-black text-white lg:p-24 ">
+		<section className=" bg-black w-screen text-white lg:p-24 relative">
+			<Image src={sidePic} alt="" className="opacity-30 absolute lg:-right-1/5 -right-1/2 lg:scale-100 scale-50 lg:top-32 top-56" />
+			<Image src={sidePic} alt="" className="opacity-30 absolute lg:-left-1/5 -left-1/2 lg:scale-100 scale-50 top-56 lg:top-32" />
 			<article className="lg:w-1/2 w-[90%] py-10 mx-auto text-center ">
 				<p className={petit.className}>
 					Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya

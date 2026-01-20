@@ -66,22 +66,22 @@ export default function Countdown({ targetDate, desc }) {
 			<p className="text-xl">Resepsi akan berlangsung dalam:</p>
 			<ul className="flex justify-center gap-5 mt-5 items-center">
 				<li>
-					<span className="text-5xl block">{formatNumber(timeLeft.days)}</span>
+					<span className="lg:text-5xl text-xl block">{formatNumber(timeLeft.days)}</span>
 					hari
 				</li>
 				:
 				<li>
-					<span className="text-5xl block">{formatNumber(timeLeft.hours)}</span>
+					<span className="lg:text-5xl text-xl block">{formatNumber(timeLeft.hours)}</span>
 					jam
 				</li>
 				:
 				<li>
-					<span className="text-5xl block">{formatNumber(timeLeft.minutes)}</span>
+					<span className="lg:text-5xl text-xl block">{formatNumber(timeLeft.minutes)}</span>
 					menit
 				</li>
 				:
 				<li>
-					<span className="text-5xl block">{formatNumber(timeLeft.seconds)}</span>
+					<span className="lg:text-5xl text-xl block">{formatNumber(timeLeft.seconds)}</span>
 					detik
 				</li>
 			</ul>

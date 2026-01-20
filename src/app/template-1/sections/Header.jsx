@@ -3,7 +3,7 @@ import * as motion from "motion/react-client";
 
 export default function Header() {
 	return (
-		<header className="h-screen bg-[url('/weddings/background.webp')] bg-cover bg-center bg-no-repeat text-white  ">
+		<header className="h-dvh bg-[url('/weddings/background.webp')] bg-cover bg-center bg-no-repeat text-white  relative">
 			<div className="size-full flex justify-center flex-col items-center bg-black/50">
 				<main className="size-fit text-center z-50">
 					<motion.h1
@@ -25,7 +25,7 @@ export default function Header() {
 					<br />
 					<p className="">Selasa, 20 Januari 2026</p>
 				</main>
-				<div className="w-full bg-linear-to-b from-transparent to-black p-56 absolute -bottom-5"></div>
+				<div className="w-full bg-gradient-to-b from-transparent to-black p-56 absolute bottom-0"></div>
 			</div>
 		</header>
 	);

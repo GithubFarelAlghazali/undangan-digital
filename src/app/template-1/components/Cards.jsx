@@ -17,7 +17,7 @@ export function WeddingCard({ img, name, desc }) {
 
 export function RundownCard({ agenda, location, date, time }) {
 	return (
-		<div className="lg:w-1/3 w-full outline-1 p-5 outline-yellow-500 rounded-xl flex flex-col gap-3  items-center">
+		<div className="lg:w-1/3 w-full outline-1 p-5  outline-yellow-500 rounded-xl flex flex-col gap-3  items-center">
 			<h3 className={`${imperial.className} text-6xl`}>{agenda}</h3>
 			<span className="flex items-center gap-2">
 				<FaCalendar />
@@ -39,7 +39,7 @@ export function RundownCard({ agenda, location, date, time }) {
 
 export function GiftCard({ bank, number, name }) {
 	return (
-		<div className="lg:w-1/3 w-full outline-1 p-5 outline-yellow-500 rounded-xl flex flex-col gap-3  text-center items-center">
+		<div className="lg:w-1/3 w-full outline-1 bg-slate-950 shadow-xl shadow-yellow-500/10 z-50 p-5 outline-yellow-500 rounded-xl flex flex-col gap-3  text-center items-center">
 			<h3 className={`${serif.className} text-xl`}>{bank}</h3>
 			<p>
 				{number}
