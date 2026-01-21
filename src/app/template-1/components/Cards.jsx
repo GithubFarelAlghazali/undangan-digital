@@ -6,14 +6,14 @@ import * as motion from "motion/react-client";
 
 const elegantTransition = {
 	duration: 0.8,
-	ease: [0.25, 0.46, 0.45, 0.94], // Cubic bezier "mahal"
+	ease: [0.25, 0.46, 0.45, 0.94],
 };
 
 const staggerContainer = {
 	hidden: { opacity: 0 },
 	visible: {
 		opacity: 1,
-		transition: { staggerChildren: 0.2 }, // Jeda antar anak 0.2 detik
+		transition: { staggerChildren: 0.2 },
 	},
 };
 
@@ -94,8 +94,8 @@ export function RundownCard({ agenda, location, date, time }) {
 
 			<motion.button
 				variants={scaleIn}
-				whileHover={{ scale: 1.05 }} // Efek saat cursor nempel
-				whileTap={{ scale: 0.95 }} // Efek saat diklik
+				whileHover={{ scale: 1.05 }}
+				whileTap={{ scale: 0.95 }}
 				className="flex justify-center gap-3 items-center cursor-pointer p-3 px-6 mt-2 rounded-xl bg-yellow-500 text-gray-950 font-semibold shadow-lg shadow-yellow-500/20"
 			>
 				<FaRegMap />
@@ -131,12 +131,7 @@ export function GiftCard({ bank, number, name }) {
 				Atau
 			</motion.p>
 
-			<motion.button
-				variants={scaleIn}
-				whileHover={{ scale: 1.05, backgroundColor: "#facc15" }} // Sedikit lebih terang saat hover
-				whileTap={{ scale: 0.95 }}
-				className="w-full p-3 rounded-xl bg-yellow-600 text-white font-semibold transition-colors"
-			>
+			<motion.button variants={scaleIn} whileHover={{ scale: 1.05, backgroundColor: "#facc15" }} whileTap={{ scale: 0.95 }} className="w-full p-3 rounded-xl bg-yellow-600 text-white font-semibold transition-colors">
 				Bayar dengan QRIS
 			</motion.button>
 		</motion.div>
