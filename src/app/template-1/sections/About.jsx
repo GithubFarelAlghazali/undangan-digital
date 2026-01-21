@@ -3,6 +3,7 @@ import { WeddingCard } from "../components/Cards";
 import Image from "next/image";
 import sidePic from "../ornaments/wayangan.svg";
 import * as motion from "motion/react-client";
+import { biodata } from "../data";
 
 export default function About() {
 	return (
@@ -34,9 +35,9 @@ export default function About() {
 					<p>Dengan memohon Rahmat dan Ridho Alah SWT, kami bermaksud menyelenggarakan Pernikahan putra - putri kami</p>
 				</article>
 				<div className="flex lg:flex-row flex-col justify-evenly items-center">
-					<WeddingCard img={"/weddings/pria.webp"} name={"Fauzi Ahmad Hakim"} desc={"Putra Pertama Bapak Zainul Hakim"} />
+					<WeddingCard img={biodata.bride.img} name={biodata.bride.name} desc={biodata.bride.desc} />
 					<span className={`${imperial.className} text-yellow-200 text-8xl`}>&</span>
-					<WeddingCard img={"/weddings/wanita.webp"} name={"Alisa Subandono"} desc={"Putri Kedua Bapak Rahman Subandono"} />
+					<WeddingCard img={biodata.groom.img} name={biodata.groom.name} desc={biodata.groom.desc} />
 				</div>
 			</div>
 		</section>

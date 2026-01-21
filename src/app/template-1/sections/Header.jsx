@@ -1,5 +1,6 @@
 import { imperial } from "../fonts";
 import * as motion from "motion/react-client";
+import { biodata } from "../data";
 
 const containerVariants = {
 	hidden: { opacity: 0 },
@@ -35,21 +36,18 @@ export default function Header() {
 						The Wedding of
 					</motion.h1>
 					<motion.h2 variants={itemVariants} className={`${imperial.className} text-7xl md:text-8xl lg:text-[10em] text-yellow-100 leading-none drop-shadow-lg`}>
-						<span className="block lg:inline">Fauzi</span>
-						<motion.span
-							variants={itemVariants} // Ampersand muncul terpisah
-							className="text-4xl lg:text-6xl align-middle mx-2 lg:mx-6 my-2 lg:my-0 block lg:inline text-white/80 font-sans font-light"
-						>
+						<span className="block lg:inline">{biodata.bride.nickname}</span>
+						<motion.span variants={itemVariants} className="text-4xl lg:text-6xl align-middle mx-2 lg:mx-6 my-2 lg:my-0 block lg:inline text-white/80 font-sans font-light">
 							&
 						</motion.span>
-						<span className="block lg:inline">Alisa</span>
+						<span className="block lg:inline">{biodata.groom.nickname}</span>
 					</motion.h2>
 
 					<br className="hidden lg:block" />
 					<br className="hidden lg:block" />
 					<motion.div variants={itemVariants} className="mt-8 lg:mt-0 space-y-3">
 						<div className="w-12 h-px bg-white/50 mx-auto mb-4"></div>
-						<p className="tracking-widest text-sm md:text-lg font-light">SELASA, 20 JANUARI 2026</p>
+						<p className="tracking-widest text-sm md:text-lg font-light">{biodata.date}</p>
 					</motion.div>
 				</motion.main>
 

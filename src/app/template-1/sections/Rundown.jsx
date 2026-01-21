@@ -3,6 +3,7 @@ import { RundownCard } from "../components/Cards";
 import Countdown from "../components/Countdown";
 import Image from "next/image";
 import border from "../ornaments/border.svg";
+import { rundown } from "../data";
 
 export default function Rundown() {
 	return (
@@ -11,10 +12,11 @@ export default function Rundown() {
 			<Image src={border} alt="" className="absolute lg:w-56 w-32 top-0 right-0 rotate-180" />
 			<h2 className={`${serif.className} lg:text-4xl text-2xl text-center pb-25`}>Rangkaian Acara</h2>
 			<div className="flex flex-col lg:flex-row justify-center items-center gap-10">
-				<RundownCard agenda={"Akad Nikah"} date={"17 Januari 2026"} time={"05:00 - 06.30"} location={"KUA Kebondalem"} />
-				<RundownCard agenda={"Resepsi"} date={"22 Januari 2026"} time={"09:00 - 17.00"} location={"Luminor Hotel Purwokerto"} />
+				{rundown.agendas.map((agenda, i) => {
+					return <RundownCard agenda={agenda.agenda} date={agenda.date} time={agenda.time} location={agenda.location} key={i} />;
+				})}
 			</div>
-			<Countdown targetDate="2026-1-20 09:00:00" desc={"Resepsi akan diselenggarakan dalam waktu"} />
+			<Countdown targetDate={rundown.mainAgenda.time} desc={`${rundown.mainAgenda.name} akan diselenggarakan dalam waktu`} />
 		</section>
 	);
 }
