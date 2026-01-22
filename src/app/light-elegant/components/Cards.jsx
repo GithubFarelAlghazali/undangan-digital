@@ -1,5 +1,5 @@
 import { fancy, formal } from "../fonts";
-import { RoundTopImg } from "./Frames";
+import { PilImg } from "./Frames";
 import { FaRegMap, FaCalendar } from "react-icons/fa";
 import { IoIosTime } from "react-icons/io";
 import * as motion from "motion/react-client";
@@ -47,7 +47,7 @@ export function WeddingCard({ img, name, desc }) {
 	return (
 		<motion.figure variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="lg:w-1/3 p-5">
 			<motion.div variants={scaleIn}>
-				<RoundTopImg img={img} alt={name} />
+				<PilImg img={img} alt={name} />
 			</motion.div>
 
 			<figcaption className="my-5 text-center">
@@ -69,24 +69,24 @@ export function RundownCard({ agenda, location, date, time }) {
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.2 }}
-			className="lg:w-1/3 w-full outline-1 p-5 outline-yellow-500 rounded-xl flex flex-col gap-3 items-center bg-black/20 backdrop-blur-sm"
+			className="lg:w-1/3 w-full outline-1 p-5 outline-yellow-500 rounded-xl flex flex-col gap-3 items-center bg-white backdrop-blur-sm"
 		>
-			<motion.h3 variants={fadeInUp} className={`${fancy.className} text-6xl text-yellow-100`}>
+			<motion.h3 variants={fadeInUp} className={`${fancy.className} text-6xl text-yellow-800`}>
 				{agenda}
 			</motion.h3>
 
-			<motion.div variants={fadeInUp} className="flex flex-col gap-2 items-center text-white/90">
+			<motion.div variants={fadeInUp} className="flex flex-col gap-2 items-center">
 				<span className="flex items-center gap-2">
-					<FaCalendar className="text-yellow-500" />
+					<FaCalendar className="text-yellow-800" />
 					{date}
 				</span>
 				<span className="flex items-center gap-2">
-					<IoIosTime className="size-5 text-yellow-500" />
+					<IoIosTime className="size-5 text-yellow-900" />
 					{time}
 				</span>
 			</motion.div>
 
-			<motion.hr variants={lineDraw} className="bg-yellow-500 h-[1px] border-none my-2" />
+			<motion.hr variants={lineDraw} className="bg-yellow-900 h-px border-none my-2" />
 
 			<motion.p variants={fadeInUp} className="text-center px-4 font-light">
 				{location}
@@ -96,7 +96,7 @@ export function RundownCard({ agenda, location, date, time }) {
 				variants={scaleIn}
 				whileHover={{ scale: 1.05 }}
 				whileTap={{ scale: 0.95 }}
-				className="flex justify-center gap-3 items-center cursor-pointer p-3 px-6 mt-2 rounded-xl bg-yellow-500 text-gray-950 font-semibold shadow-lg shadow-yellow-500/20"
+				className="flex justify-center gap-3 items-center cursor-pointer p-3 px-6 mt-2 rounded-xl bg-yellow-600 text-gray-50 font-semibold shadow-lg shadow-yellow-500/20"
 			>
 				<FaRegMap />
 				Lihat Lokasi

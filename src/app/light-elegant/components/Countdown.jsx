@@ -56,7 +56,7 @@ export default function Countdown({ targetDate, desc }) {
 	if (isFinish) {
 		return (
 			<div className="p-5 rounded-md lg:w-1/2 mx-auto my-10 text-center animate-pulse">
-				<p className="text-3xl font-bold text-yellow-500">Acara Sedang Berlangsung / Selesai</p>
+				<p className="text-3xl font-bold text-yellow-900">Acara Sedang Berlangsung / Selesai</p>
 			</div>
 		);
 	}
